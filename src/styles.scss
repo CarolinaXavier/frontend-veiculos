@@ -1,4 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+mat-sidenav {
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.success-snackbar {
+  background: #4caf50; // verde
+  color: #fff;
+}
+
+.error-snackbar {
+  background: #f44336; // vermelho
+  color: #fff;
+}
+
+.warning-snackbar {
+  background: #ff9800; // laranja
+  color: #fff;
+}
+
+.success-snackbar {
+  .mdc-snackbar__surface {
+    background-color: #2e7d32 !important; // verde
+    color: #fff !important;
+  }
+}
+
+.error-snackbar {
+  .mdc-snackbar__surface {
+    background-color: #d32f2f !important; // vermelho
+    color: #fff !important;
+  }
+}

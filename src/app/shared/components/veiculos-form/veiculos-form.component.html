@@ -1,21 +1,61 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<div class="page-container">
 
-  <mat-form-field>
-    <input matInput placeholder="Placa" formControlName="placa">
-  </mat-form-field>
+  <!-- HEADER -->
+  <div class="header">
+    <button mat-icon-button (click)="voltar()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
 
-  <mat-form-field>
-    <input matInput placeholder="Modelo" formControlName="modelo">
-  </mat-form-field>
+    <h2>Cadastro de Veículo</h2>
+  </div>
 
-  <mat-form-field>
-    <input matInput placeholder="Marca" formControlName="marca">
-  </mat-form-field>
+  <!-- CARD -->
+  <mat-card class="form-card">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-grid">
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Placa</mat-label>
+          <input matInput formControlName="placa">
+        </mat-form-field>
 
-  <mat-form-field>
-    <input matInput type="number" placeholder="Ano" formControlName="ano">
-  </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Modelo</mat-label>
+          <input matInput formControlName="modelo">
+        </mat-form-field>
 
-  <button mat-raised-button color="primary">Salvar</button>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Marca</mat-label>
+          <input matInput formControlName="marca">
+        </mat-form-field>
 
-</form>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Chassi</mat-label>
+          <input matInput formControlName="chassi">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Renavam</mat-label>
+          <input matInput formControlName="renavam" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Ano</mat-label>
+          <input matInput type="number" formControlName="ano">
+        </mat-form-field>
+
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+        <button mat-stroked-button color="primary" type="button" (click)="voltar()">
+          Voltar
+        </button>
+
+        <button mat-raised-button color="primary" type="submit">
+          Salvar
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

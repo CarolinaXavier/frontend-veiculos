@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class VeiculosService {
-  api = environment.apiUrl
+  api = `${environment.apiUrl}/veiculos`;
  constructor(private http: HttpClient) {}
 
   listar(): Observable<Veiculo[]> {
