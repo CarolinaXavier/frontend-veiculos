@@ -1,3 +1,27 @@
-<p>
-  layout works!
-</p>
+<mat-sidenav-container class="container">
+
+  <!-- MENU LATERAL -->
+  <mat-sidenav mode="side" opened>
+    <h3 class="menu-title">Menu</h3>
+
+    <button mat-button routerLink="/veiculos">
+      🚗 Veículos
+    </button>
+  </mat-sidenav>
+
+  <!-- CONTEÚDO -->
+  <mat-sidenav-content>
+
+    <!-- HEADER -->
+    <mat-toolbar color="primary">
+      <span>🚗 Sistema de Veículos</span>
+    </mat-toolbar>
+
+    <!-- CONTEÚDO DAS PÁGINAS -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
