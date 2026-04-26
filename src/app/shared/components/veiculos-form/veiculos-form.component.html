@@ -1,3 +1,21 @@
-<p>
-  veiculos-form works!
-</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <mat-form-field>
+    <input matInput placeholder="Placa" formControlName="placa">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Modelo" formControlName="modelo">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Marca" formControlName="marca">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Ano" formControlName="ano">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Salvar</button>
+
+</form>
