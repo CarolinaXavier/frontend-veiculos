@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  apiUrl: 'https://backend-veiculos.vercel.app/api'
+    production: true,
+    apiUrl: 'http://localhost:3000'
 };
