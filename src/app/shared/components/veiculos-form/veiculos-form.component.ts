@@ -19,7 +19,7 @@ export class VeiculosFormComponent implements OnInit, OnChanges {
     renavam: ['', Validators.required],
     modelo: ['', Validators.required],
     marca: ['', Validators.required],
-    ano: [0, [Validators.required, Validators.min(1900)]],
+    ano: ['', [Validators.required, Validators.min(1900)]],
   });
 
   constructor(private fb: FormBuilder,
